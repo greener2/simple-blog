@@ -1,5 +1,8 @@
-<div class="post-summary">
-    <h2>{{ post.title }}</h2>
-    <h4>{{ post.subtitle }}</h4>
-    <p>{{ post.body }}</p>
+<div class="post-summary card">
+    <div class="card-body">
+        <h5 class="card-title">{{ post.title }}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">{{ post.subtitle }}</h6>
+        <p class="card-text">{{ post.body|truncatewords_html:"20" }}</p>
+        <a href="{% url 'post_detail' post.id %}" class="btn btn-primary">Read</a>
+    </div>
 </div>

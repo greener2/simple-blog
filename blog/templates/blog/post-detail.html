@@ -1,0 +1,8 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+    <h1>{{ post.title }}</h1>
+    <h4 class="text-muted">{{ post.subtitle }}</h4>
+    <h6>Author: {{ post.author }}, posted at {{ post.date_published }}</h6>
+    <p>{{ post.body }}</p>
+{% endblock %}
