@@ -1,0 +1,26 @@
+.header, .footer {
+  background-color: #13b5ea;
+}
+
+.footer {
+    font-style: italic;
+    font-size: smaller;
+    text-align: center;
+}
+
+.site-title {
+  font-size: 2em;
+}
+
+.sidebar {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.profiler {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}

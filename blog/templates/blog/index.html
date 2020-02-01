@@ -1,16 +1,12 @@
 {% extends "blog/base.html" %}
 
 {% block content %}
-    <h1>Rob Greene - Software Developer</h1>
     <p>Here are some of my blog posts from the world of software development.</p>
-    <div class="sidebar">
-         {% include "blog/about-me.html" %}
-    </div>
-    {% for post in post_list %}
-        <div class="row">
-            <div class="col-sm-10">
-                {% include "blog/post-summary.html" %}
-            </div>
-        </div>
-    {% endfor %}
+    {% if not post_list %}
+        <h3>No posts yet, stay tuned!</h3>
+    {% else %}
+        {% for post in post_list %}
+            {% include "blog/post-summary.html" %}
+        {% endfor %}
+    {% endif %}
 {% endblock %}
