@@ -1,0 +1,9 @@
+<p class="tags-list">Tags:
+    {% if not post.tags.count %}
+        none
+    {% else %}
+        {% for tag in post.tags.all %}
+            {{ tag.name }}{% if not forloop.last %},{% endif %}
+        {% endfor %}
+    {% endif %}
+</p>

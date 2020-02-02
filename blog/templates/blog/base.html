@@ -10,7 +10,7 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark justify-content-between p-3 header">
-    <a class="navbar-brand site-title" href="#">Rob Greene | <span class="text-muted">Software Developer</span></a>
+    <a class="navbar-brand site-title" href="{% url 'home' %}">Rob Greene | <span class="text-muted">Software Developer</span></a>
     <form class="form-inline">
         <div class="input-group">
             <input class="form-control" type="search" placeholder="Search" aria-label="Search"/>
@@ -20,14 +20,12 @@
 </nav>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-sm-3 pl-5 pr-5 pt-4 sidebar">
-            {% include "blog/about-me.html" %}
-        </div>
+        {% include "blog/sidebar.html" %}
         <div class="col-sm-9 content p-4">
             {% block content %}{% endblock %}
         </div>
     </div>
-    <div class="footer fixed-bottom">
+    <div class="row footer">
         <div class="col-sm-12 pl-4 pt-2 ">
             <p class="text-muted">Note that all ideas, work and code examples that are posted to this blog that have no
                 attribution can be assumed to be my work and can be freely reproduced unless specifically stated

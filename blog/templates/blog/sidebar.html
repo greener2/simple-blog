@@ -1,0 +1,11 @@
+<div class="col-sm-3 pl-5 pr-5 pt-4 sidebar">
+    <div>
+        {% include "blog/about-me.html" %}
+    </div>
+    <div class="tags-select">
+        <h5>Article Tags</h5>
+        {% for tag in tags %}
+            <a href="#" alt="{{ tag.name }} Tag">{{ tag.name }}</a>
+        {% endfor %}
+    </div>
+</div>

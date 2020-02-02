@@ -2,7 +2,10 @@
 
 {% block content %}
     <h1>{{ post.title }}</h1>
-    <h4 class="text-muted">{{ post.subtitle }}</h4>
-    <h6>Author: {{ post.author }}, posted at {{ post.date_published }}</h6>
-    <p>{{ post.body }}</p>
+    <div>
+        <h4 class="text-muted" style="display: inline;">{{ post.subtitle }}</h4>
+        <p class="date-posted">Author: {{ post.author }}, posted at {{ post.date_published }}</p>
+    </div>
+    {% include "blog/tags-list.html" %}
+    <div class="content-body">{{ post.body | safe }}</div>
 {% endblock %}
