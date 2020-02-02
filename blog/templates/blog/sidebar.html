@@ -4,8 +4,14 @@
     </div>
     <div class="tags-select">
         <h5>Article Tags</h5>
-        {% for tag in tags %}
-            <a href="#" alt="{{ tag.name }} Tag">{{ tag.name }}</a>
-        {% endfor %}
+        {% if tags.count %}
+            <ul>
+            {% for tag in tags %}
+                <li><a href="{% url 'tag_search' name=tag.name %}">{{ tag.name }}</a></li>
+            {% endfor %}
+            </ul>
+        {% else %}
+            <em>No tags yet.</em>
+        {% endif %}
     </div>
 </div>

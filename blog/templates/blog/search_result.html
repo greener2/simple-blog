@@ -1,9 +1,9 @@
 {% extends "blog/base.html" %}
 
 {% block content %}
-    <p>Posts</p>
+    <p>Posts containing the search term "{{ search_query }}"</p>
     {% if not posts %}
-        <h3>No posts yet, stay tuned!</h3>
+        <h3>No matches found!</h3>
     {% else %}
         {% for post in posts %}
             {% include "blog/post-summary.html" %}

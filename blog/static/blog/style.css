@@ -1,5 +1,11 @@
 body, html, .footer {
-    height: 100vh;
+    height: 50vh;
+}
+
+.tags-select ul {
+    text-decoration: none;
+    list-style: none;
+    padding-left: 10px;
 }
 
 .header, .footer {
@@ -13,7 +19,6 @@ body, html, .footer {
 }
 
 .site-title {
-  font-size: 2em;
 }
 
 .sidebar {
