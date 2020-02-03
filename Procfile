@@ -1,1 +1,1 @@
-web: gunicorn movierater.wsgi --log-file -
+web: gunicorn blogsite.wsgi --log-file -
