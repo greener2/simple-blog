@@ -29,6 +29,7 @@ DEBUG = config("DEBUG")
 
 ALLOWED_HOSTS = [
     "greener-blog.herokuapp.com",
+    "127.0.0.1",
 ]
 
 

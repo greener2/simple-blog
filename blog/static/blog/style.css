@@ -38,7 +38,8 @@
 }
 
 .content-body {
-
+    text-align: justify;
+    text-justify: newspaper;
 }
 
 .tags-list {
