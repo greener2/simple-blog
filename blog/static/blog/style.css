@@ -1,21 +1,17 @@
-body, html, .footer {
-    height: 50vh;
-}
-
 .tags-select ul {
     text-decoration: none;
     list-style: none;
     padding-left: 10px;
 }
 
-.header, .footer {
+.header {
   background-color: #13b5ea;
 }
 
 .footer {
     font-style: italic;
     font-size: smaller;
-    text-align: center;
+    font-weight: lighter;
 }
 
 .site-title {

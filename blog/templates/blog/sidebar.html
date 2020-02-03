@@ -1,17 +1,15 @@
-<div class="col-sm-3 pl-5 pr-5 pt-4 sidebar">
-    <div>
-        {% include "blog/about-me.html" %}
-    </div>
-    <div class="tags-select">
-        <h5>Article Tags</h5>
-        {% if tags.count %}
-            <ul>
-            {% for tag in tags %}
-                <li><a href="{% url 'tag_search' name=tag.name %}">{{ tag.name }}</a></li>
-            {% endfor %}
-            </ul>
-        {% else %}
-            <em>No tags yet.</em>
-        {% endif %}
-    </div>
+<div>
+    {% include "blog/about-me.html" %}
+</div>
+<div class="tags-select">
+    <h5>Article Tags</h5>
+    {% if tags.count %}
+        <ul>
+        {% for tag in tags %}
+            <li><a href="{% url 'tag_search' name=tag.name %}">{{ tag.name }}</a></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <em>No tags yet.</em>
+    {% endif %}
 </div>

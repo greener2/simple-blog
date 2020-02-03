@@ -2,9 +2,6 @@
     <div class="card-body">
         <h5 class="card-title">{{ post.title }}</h5>
         <h6 class="card-subtitle mb-2 text-muted">{{ post.subtitle }}</h6>
-        <!-- Not sure whether to include any of the blog post in here...or how? -->
-        <!-- Perhaps just the first paragraph? -->
-        <!--<p class="card-text">{{ post.body|truncatewords_html:"20" }}</p>-->
         {% include "blog/tags-list.html" %}
         <a href="{% url 'post_detail' post.id %}" class="btn btn-primary">Read</a>
     </div>

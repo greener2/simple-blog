@@ -7,8 +7,8 @@ from django.db import models
 class Tag(models.Model):
     name = models.CharField(max_length=24)
 
-    def __repr__(self):
-        return f"<Tag '{self.name}'>"
+    def __str__(self):
+        return self.name
 
 
 class Post(models.Model):
@@ -19,5 +19,5 @@ class Post(models.Model):
     date_published = models.DateTimeField(default=datetime.datetime.utcnow)
     tags = models.ManyToManyField(Tag)
 
-    def __repr__(self):
+    def __str__(self):
         return f"<Post '{self.title}'>"
